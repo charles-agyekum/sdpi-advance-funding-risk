@@ -5,8 +5,7 @@ Rebuilds the district-level risk position of a Ghanaian cocoa district across th
 2022/23 season (36 purchasing clerks, 16 weeks) and reports the default-incentive
 threshold that gives the index its name.
 
-The question the index answers, in one line:
-    at what market price does a supplier profit by NOT delivering?
+The index finds the market price at which a supplier profits by not delivering.
 
 An advance is issued against future delivery. Deductions are withheld against it,
 and those deductions are what a defaulting supplier forfeits. So default becomes
@@ -161,12 +160,12 @@ def main():
         print(f"   closed from peak    {1 - pos[-1]['gap'] / peak['gap']:.0%}")
 
     print("\n5. THE MARKET SIDE  (see README for sources)")
-    print("   Ghana's price is FIXED by COCOBOD (GHS 800/bag, 2022/23) - no domestic")
-    print("   spot market. Default pressure is cross-border: Cote d'Ivoire farmgate")
-    print("   ~$1.33/kg vs Ghana ~$0.89-1.25/kg as the cedi fell ~27% in 2022. The")
-    print("   gap ran several times the 6.00% threshold, matching that season's")
-    print("   documented smuggling. Pressure is an upper bound, not a realised")
-    print("   per-supplier return.")
+    print("   COCOBOD fixed Ghana's price at GHS 800 a bag in 2022/23, so there is")
+    print("   no domestic spot market. The pressure came from across the border:")
+    print("   Cote d'Ivoire farmgate about $1.33/kg against Ghana's $0.89 to $1.25/kg")
+    print("   as the cedi fell about 27% in 2022. The gap ran at several times the")
+    print("   6.00% threshold in a season of documented smuggling. Cross-border")
+    print("   prices set an upper bound on the pressure.")
 
     if a.figures:
         figures(weekly, curve, Path(__file__).parent / "figures")
