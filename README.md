@@ -1,127 +1,101 @@
 # Strategic Default Pressure Index: advance-funding risk in commodity finance
 
-**The question.** When you lend against a future delivery, at what market price does your
-counterparty profit by not delivering?
+The index finds the market price at which a supplier, funded against a future delivery, gains more by selling elsewhere than by delivering.
 
-**The answer, for this book.** A 6.00 % premium. Above it, a supplier earns more by selling
-elsewhere and forfeiting the collateral than by honouring the advance.
+For this book, that point is a 6.00% premium over the advance.
 
-**Whose book.** Mine. I carried this exposure personally, under bond, as the franchise holder
-funding 36 purchasing clerks across a Ghanaian cocoa district. I built the index while running
-that book, because the losses were mine to absorb. The written funding policy behind these
-numbers is also mine: clerk risk-tiering and averaging-based funding ceilings.
+I carried this exposure personally, under bond, as the franchise holder funding 36 purchasing clerks in a Ghanaian cocoa district. I built the index while running that book.
 
-So the risk here was real before it was ever analytical. This piece reconstructs the season
-from the operational records and shows what the index was doing.
+The funding policy behind it is mine too: a risk tier for each clerk, and funding ceilings based on averages.
 
----
+This piece rebuilds the 2022/23 season from the operational records, week by week.
 
 ## Why it matters
 
-Advance-against-delivery is how most origin commodity trade is financed. The exposure is
-usually managed **reactively**: a delivery fails, the loss is booked, recovery starts. But
-the decision to default is an economic one, made by the counterparty before the delivery date,
-and the inputs to that decision are all observable in advance.
+Most commodity buying at origin is financed by advances against future delivery.
 
-So the exposure is predictable. The index makes the prediction explicit: it tracks how close
-the market premium is to the point where defaulting becomes the rational choice, and flags
-the counterparties whose position makes them most sensitive to it.
+Lenders usually deal with default after the event: a delivery fails, the loss is booked and the recovery work starts.
 
-That is the shift the piece demonstrates: **from booking losses to pricing the incentive
-that causes them.**
+Yet a supplier decides to default before the delivery date, on prices the lender can see too.
+
+The index tracks how close the market premium is to the point where default pays, and flags the clerks whose positions are most exposed to it.
 
 ## The data
 
-One cocoa franchise district, 2022/23 season. **36 purchasing clerks, 16 weeks**
-(16 Sep to 30 Dec 2022), from three dated risk reports that track the same season
-forward, so the position itself has a time dimension, not just a closing snapshot.
+One cocoa franchise district in the 2022/23 season: 36 purchasing clerks over 16 weeks, from 16 September to 30 December 2022.
+
+Three dated risk reports cover the same season. The position can be followed through the weeks, as well as at the close.
 
 ## What it found
 
-**1. The threshold is 6.00 %, and it is exact.**
+### 1. Default pays above a 6.00% premium
 
-**2. The gap closed by 83 % over the season.**
+A supplier who takes the advance and sells elsewhere loses 6.00% of the GHS 800 bag price. In 2022/23 that was GHS 48.
+
+Above that premium, default pays.
+
+### 2. The open gap fell 83% from its peak
 
 | Report | Clerks | Funded | Delivered | Open gap | Recovery | Net exposure (GHS) |
 |---|---:|---:|---:|---:|---:|---:|
-| Opening | 35 | 1,487 | 1,190 | 297 | 80.0 % | 169,788 |
-| November | 36 | 2,025 | 1,798 | 227 | 88.8 % | 87,124 |
-| December | 36 | 2,075 | 1,964 | 111 | 94.7 % | **−9,468** |
+| Opening | 35 | 1,487 | 1,190 | 297 | 80.0% | 169,788 |
+| November | 36 | 2,025 | 1,798 | 227 | 88.8% | 87,124 |
+| December | 36 | 2,075 | 1,964 | 111 | 94.7% | −9,468 |
 
-Peak open exposure was **654 bags in the week ending 25 November**, closing at 111, an 83 %
-reduction *while funding continued to grow*, which is the harder version of the problem. By
-season end the net position had crossed into credit.
+Open exposure peaked at 654 bags in the week ending 25 November and closed the season at 111 bags, while the funding kept growing.
 
-In money: **GHS 169,788 of open exposure recovered to a GHS 9,468 credit** across sixteen
-weeks. On a book that funded GHS 1.66 million over the season, that is the difference between
-a written-off season and a clean one, and it was recovered without withdrawing the bond.
+In money, GHS 169,788 of open exposure at the opening report became a GHS 9,468 credit sixteen weeks later, on a book that funded GHS 1.66 million over the season.
 
-**3. Exposure was concentrated, not spread.**
+The bond was never drawn on.
 
-**4 of 36 clerks carried half the open gap; 9 carried 80 %.** The largest single position was
-19.5 % of the total on its own.
+### 3. Four clerks carried half the exposure
 
-This is the finding with the clearest operational consequence. A uniform funding policy
-across 36 counterparties would have mispriced almost all of them. The district's own written
-policy already categorised clerks; the data supports that judgement and quantifies it.
+Four of the 36 clerks carried half of the open gap. Nine carried 80%. The largest single position was 19.5% of the total.
 
-## The market side: where the default pressure actually comes from
+One funding policy for all 36 would have mispriced almost all of them.
 
-The archive holds no price column, so an early draft of this piece said the index "could not
-be shown firing against live prices." That was too pessimistic, and it misread the market.
-Ghana's cocoa price is **administered, not floating**. COCOBOD fixes a single producer price
-for the whole season, so there is no domestic spot market for a supplier to sell into. The
-2022/23 price was set at **GH¢800 per 64 kg bag** from 7 October 2022, which is exactly the
-`800` the archive's model runs on. The season data and the official price agree.
+The district's written policy already placed clerks in risk tiers. The season data puts numbers on them.
 
-So the default pressure is not a rising *domestic* price. It is **cross-border and currency
-arbitrage**:
+## Where the pressure came from
 
-| Reference, 2022/23 | Price | In USD (CFA is euro-pegged and stable) |
+COCOBOD sets one producer price for the whole season, so a Ghanaian supplier has no domestic spot market to sell into. In 2022/23 it was GHS 800 per 64 kg bag from 7 October 2022, the figure the model uses.
+
+The pressure came from across the border, and from the currency.
+
+| Reference, 2022/23 | Price | In US dollars (the CFA franc is pegged to the euro) |
 |---|---|---|
-| Ghana, COCOBOD fixed | GH¢800 / 64 kg = **GH¢12.50/kg** | **$0.89 to $1.25/kg**, falling through the season as the cedi did |
-| Côte d'Ivoire, fixed farmgate | **900 CFA/kg** | **~$1.33/kg**, roughly flat |
+| Ghana, COCOBOD price | GHS 800 / 64 kg = GHS 12.50/kg | $0.89 to $1.25/kg, falling through the season with the cedi |
+| Côte d'Ivoire, farmgate price | 900 CFA/kg | about $1.33/kg, roughly flat |
 
-The Ghanaian cedi **lost about 27% against the dollar in 2022**, touching ~GH¢14.6/$ late in
-the year. As it fell, the Ivorian farmgate price pulled further above the Ghanaian one in real
-terms, from roughly level early in the season to **~40 to 50% higher** by its trough.
+The cedi lost about 27% against the dollar in 2022, touching about GHS 14.6 to the dollar late in the year.
 
-**Set that against the index's 6.00% threshold.** A supplier defaults when they can net more
-than 6% elsewhere. For much of the 2022/23 season the cross-border gap **exceeded that
-threshold by several times**, which is precisely why Ghana lost significant volume to
-smuggling into Côte d'Ivoire that year. The index was not a hypothesis; the pressure it
-measures was real and, in this season, severe. It also explains the archive's own shape: the
-default gap was **widest early** (297 bags, 80% recovery at the opening report) when the
-arbitrage was opening up, and was worked down only through active recovery.
+As it fell, the Ivorian price moved further above Ghana's in dollar terms. Roughly level early in the season, it was 40 to 50% higher at the cedi's low point.
 
-## What it still does not show
+A supplier defaults when selling elsewhere nets more than 6% over the advance. For much of the season the cross-border gap ran at several times that threshold, and Ghana lost significant volume to smuggling into Côte d'Ivoire that year.
 
-The **direction and magnitude** of the pressure are now evidenced and sourced. What is not
-derivable to the day is the exact date the threshold was crossed for a given clerk; that
-needs a **daily** cedi/dollar series and the specific smuggling-route economics (transport,
-risk, the discount a cross-border buyer pays), none of which are in the archive.
+The season data has the same shape. The open gap was widest at the opening report, 297 bags with 80% recovery, just as the cross-border gap was opening, and it came down only through active recovery.
 
-And the honest ceiling on the claim: the cross-border price is an **upper bound on pressure**,
-not a realised return every supplier could capture. Smuggling carries cost and risk, and most
-suppliers never act on it. The index measures *pressure to default*, which is what its name
-says, not a guaranteed alternative price. That is the right thing for a risk instrument to
-measure: the incentive, before the delivery fails.
+## Limits
+
+The data shows the direction and size of the pressure. It cannot date the week a given clerk crossed the threshold; that would need a daily cedi to dollar series and the costs of the smuggling routes, including transport, risk and the discount a cross-border buyer takes.
+
+Cross-border prices set an upper bound on the pressure, because smuggling carries its own cost and risk and most suppliers never do it.
+
+So the index measures the incentive to default, which a lender can act on before a delivery fails.
+
+This is one district over one season. It is a reconstruction from operational records at weekly frequency, because the business reported weekly, and it is not a production risk system.
 
 ## Price reference
 
-| Season | COCOBOD producer price (Ghana, 64 kg bag) | Côte d'Ivoire farmgate |
+| Season | COCOBOD producer price (Ghana, 64 kg bag) | Côte d'Ivoire farmgate price |
 |---|---|---|
-| 2021/22 | GH¢660 | 825 CFA/kg (main crop) |
-| 2022/23 | **GH¢800** (from 7 Oct 2022) | 900 CFA/kg (~$1.33/kg) |
+| 2021/22 | GHS 660 | 825 CFA/kg (main crop) |
+| 2022/23 | GHS 800 (from 7 October 2022) | 900 CFA/kg (about $1.33/kg) |
 
 Sources: [COCOBOD: producer price up 21% to GH¢800/bag](https://cocobod.gh/news/cocoa-producer-price-goes-up-21-to-gh800-per-bag) ·
 [COCOBOD: 2021/22 price maintained](https://cocobod.gh/news/government-maintains-cocoa-producer-price-for-the-20212022-crop-year) ·
 [Ivory Coast raises 2022/23 farmgate price 9% to 900 CFA](https://furtherafrica.com/2022/10/03/ivory-coast-raises-cocoa-farmgate-price-by-9-for-2022-2023-harvest/) ·
-[GHS/USD 2022 history (−26% on the year)](https://www.exchange-rates.org/exchange-rate-history/ghs-usd-2022).
-
-Other limits worth being straight about: one district, one season, 36 counterparties. A
-reconstruction from operational records, not a production risk system. Weekly granularity,
-because that is the reporting cadence the business ran on.
+[GHS/USD exchange rate history, 2022](https://www.exchange-rates.org/exchange-rate-history/ghs-usd-2022).
 
 ## Running it
 
@@ -129,9 +103,4 @@ because that is the reporting cadence the business ran on.
 python sdpi.py --data data --figures
 ```
 
-## Where this sits
-
-| | |
-|---|---|
-| Method | Python · district-level aggregation · incentive-threshold derivation |
-| Domain | Commodity finance · counterparty credit risk · advance-against-delivery |
+The `--figures` option needs matplotlib. The results print without it.
