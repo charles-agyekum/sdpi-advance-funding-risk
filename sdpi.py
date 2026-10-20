@@ -82,6 +82,15 @@ def figures(weekly, curve, out_dir):
     except ImportError:
         print("\n  (matplotlib not installed -- figures skipped)")
         return
+    from matplotlib import font_manager
+    from matplotlib.ticker import MaxNLocator
+    # House style: Hanken Grotesk where installed, ink text, light rules, brand green.
+    if any(f.name == "Hanken Grotesk" for f in font_manager.fontManager.ttflist):
+        plt.rcParams["font.family"] = "Hanken Grotesk"
+    plt.rcParams.update({"text.color": "#171717", "axes.labelcolor": "#171717",
+                         "axes.edgecolor": "#E6E6E2", "xtick.color": "#5B5B5B",
+                         "ytick.color": "#5B5B5B", "grid.color": "#E6E6E2",
+                         "axes.spines.top": False, "axes.spines.right": False})
     out_dir.mkdir(parents=True, exist_ok=True)
 
     pos = weekly_position(weekly)
@@ -102,6 +111,7 @@ def figures(weekly, curve, out_dir):
             marker="o", lw=2, color="#1F6B4F")
     ax.axhline(80, ls="--", alpha=0.5, color="#5B5B5B")
     ax.set_xlabel("Clerks, ranked by open gap")
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     ax.set_ylabel("Share of total gap (%)")
     ax.set_title("Exposure concentration at season end")
     ax.grid(alpha=0.25); plt.tight_layout()
