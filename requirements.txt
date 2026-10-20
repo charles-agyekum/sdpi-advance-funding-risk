@@ -1,0 +1,2 @@
+# Optional — only needed for --figures. Every finding prints without it.
+matplotlib>=3.7
